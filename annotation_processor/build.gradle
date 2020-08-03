@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':annotation')
+
+    //要成为注解处理器必须依赖Google的两个服务依赖
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc7'
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc7'
+
+    //android studio3.4以下版本使用下面的，注解处理器才能起作用
+//    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

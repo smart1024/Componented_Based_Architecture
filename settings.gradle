@@ -1,0 +1,7 @@
+include ':annotation_processor'
+include ':annotation'
+include ':arouter'
+include ':login'
+include ':member'
+include ':app'
+rootProject.name = "Componented_Based_Architecture"
